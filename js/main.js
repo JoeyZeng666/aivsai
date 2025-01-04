@@ -52,13 +52,15 @@ async function loadCompareItems(categoryId) {
         const filteredItems = items.filter(item => item.categoryId === categoryId);
         
         compareItems.innerHTML = filteredItems.map(item => `
-            <div class="compare-item">
-                <div class="prompt-text">${item.prompt}</div>
-                <div class="image-grid">
+            <div class="compare-item mb-3">
+                <p class="prompt-text text-muted mb-2 fs-6">${item.prompt}</p>
+                <div class="row g-2">
                     ${item.aiResults.map(result => `
-                        <div class="ai-result">
-                            <img src="${result.imageUrl}" alt="${result.aiTool} 生成的图片" class="ai-image">
-                            <div class="ai-tool-name">${result.aiTool}</div>
+                        <div class="col-md-4">
+                            <figure class="figure mb-2">
+                                <img src="${result.imageUrl}" alt="${result.aiTool} 生成的图片" class="figure-img img-fluid rounded shadow-none">
+                                <figcaption class="figure-caption text-center mt-1 small">${result.aiTool}</figcaption>
+                            </figure>
                         </div>
                     `).join('')}
                 </div>
