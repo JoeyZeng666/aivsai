@@ -2,6 +2,7 @@
 let allCompareItems = [];
 let selectedTags = new Set();
 let tagNameMap = {}; // 新增：存储标签id到name的映射
+let imageCache = new Map(); // 新增：用于缓存已加载的图片
 
 // 加载分类数据
 async function loadCategories() {
@@ -84,6 +85,25 @@ function isMobile() {
     return window.innerWidth < 576; // 使用 Bootstrap 的 sm 断点
 }
 
+// 新增：图片加载函数
+function loadImage(url) {
+    return new Promise((resolve, reject) => {
+        // 检查缓存
+        if (imageCache.has(url)) {
+            resolve(imageCache.get(url));
+            return;
+        }
+
+        const img = new Image();
+        img.onload = () => {
+            imageCache.set(url, url); // 缓存图片URL
+            resolve(url);
+        };
+        img.onerror = () => reject(new Error(`Failed to load image: ${url}`));
+        img.src = url;
+    });
+}
+
 // 修改 filterCompareItems 函数
 function filterCompareItems() {
     const compareItems = document.getElementById('compareItems');
@@ -106,22 +126,17 @@ function filterCompareItems() {
                     <div class="d-flex flex-column align-items-start mb-2">
                         <p class="prompt-text text-muted mb-2">${item.prompt}</p>
                         <div class="tags-display">
-                            ${item.tags.map(tagId => {
-                                const tagInfo = tagNameMap[tagId];
-                                return tagInfo ? `
-                                    <span class="badge text-secondary bg-light border me-1 mb-1" style="font-size: 0.75rem; font-weight: normal;">
-                                        ${tagInfo.emoji} ${tagInfo.name}
-                                    </span>
-                                ` : '';
-                            }).join('')}
+                            ${renderTags(item.tags)}
                         </div>
                     </div>
                     <div class="row g-2">
                         ${item.aiResults.map(result => `
                             <div class="col-12">
                                 <figure class="figure mb-2">
-                                    <img src="${result.imageUrl}" alt="${result.aiTool} 生成的图片" 
-                                         class="figure-img img-fluid rounded shadow-none w-100">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3C/svg%3E"
+                                         data-src="${result.imageUrl}"
+                                         alt="${result.aiTool} 生成的图片" 
+                                         class="figure-img img-fluid rounded shadow-none w-100 lazy">
                                     <figcaption class="figure-caption text-center mt-1 small">${result.aiTool}</figcaption>
                                 </figure>
                             </div>
@@ -138,22 +153,17 @@ function filterCompareItems() {
                     <div class="d-flex align-items-start justify-content-between mb-3">
                         <p class="prompt-text text-muted mb-0">${item.prompt}</p>
                         <div class="tags-display ms-3">
-                            ${item.tags.map(tagId => {
-                                const tagInfo = tagNameMap[tagId];
-                                return tagInfo ? `
-                                    <span class="badge text-secondary bg-light border me-1" style="font-size: 0.75rem; font-weight: normal;">
-                                        ${tagInfo.emoji} ${tagInfo.name}
-                                    </span>
-                                ` : '';
-                            }).join('')}
+                            ${renderTags(item.tags)}
                         </div>
                     </div>
                     <div class="row g-4">
                         ${item.aiResults.map(result => `
                             <div class="col-sm-4">
                                 <figure class="figure mb-2">
-                                    <img src="${result.imageUrl}" alt="${result.aiTool} 生成的图片" 
-                                         class="figure-img img-fluid rounded shadow-none">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3C/svg%3E"
+                                         data-src="${result.imageUrl}"
+                                         alt="${result.aiTool} 生成的图片" 
+                                         class="figure-img img-fluid rounded shadow-none lazy">
                                     <figcaption class="figure-caption text-center mt-2">${result.aiTool}</figcaption>
                                 </figure>
                             </div>
@@ -163,6 +173,46 @@ function filterCompareItems() {
             </div>
         `).join('');
     }
+
+    // 初始化懒加载
+    initLazyLoading();
+}
+
+// 新增：初始化懒加载
+function initLazyLoading() {
+    const lazyImages = document.querySelectorAll('img.lazy');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                loadImage(img.dataset.src)
+                    .then(url => {
+                        img.src = url;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    })
+                    .catch(error => {
+                        console.error('Error loading image:', error);
+                        img.src = 'path/to/error-image.png'; // 添加一个加载失败的占位图
+                    });
+            }
+        });
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+}
+
+// 新增：渲染标签的辅助函数
+function renderTags(tags) {
+    return tags.map(tagId => {
+        const tagInfo = tagNameMap[tagId];
+        return tagInfo ? `
+            <span class="badge text-secondary bg-light border me-1" style="font-size: 0.75rem; font-weight: normal;">
+                ${tagInfo.emoji} ${tagInfo.name}
+            </span>
+        ` : '';
+    }).join('');
 }
 
 // 添加窗口大小变化的监听器
