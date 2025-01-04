@@ -10,7 +10,7 @@ async function loadCategories() {
             li.className = 'nav-item';
             li.innerHTML = `
                 <a class="nav-link" href="#" data-category="${category.id}">
-                    <i class="bi bi-grid me-2"></i>
+                    <span class="category-emoji">${category.emoji}</span>
                     ${category.name}
                 </a>
             `;

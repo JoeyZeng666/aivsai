@@ -2,11 +2,13 @@
     {
         "id": "landscape",
         "name": "风景",
-        "description": "自然风景图片对比"
+        "description": "自然风景图片对比",
+        "emoji": "🌄"
     },
     {
         "id": "portrait",
         "name": "人像",
-        "description": "人物肖像图片对比"
+        "description": "人物肖像图片对比",
+        "emoji": "👤"
     }
 ] 

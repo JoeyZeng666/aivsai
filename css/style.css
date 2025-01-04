@@ -55,6 +55,9 @@ body {
     background: transparent;
     box-shadow: none;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-pills .nav-link:hover {
@@ -173,6 +176,11 @@ body {
     font-size: 0.9rem;
 }
 
+.category-emoji {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
 /* 响应式调整 */
 @media (max-width: 767.98px) {
     .container-fluid {
@@ -208,5 +216,9 @@ body {
     
     .nav-pills .nav-link {
         font-size: 0.9rem;
+    }
+
+    .category-emoji {
+        font-size: 1rem;
     }
 } 
