@@ -1,6 +1,31 @@
+body {
+    padding-top: 56px; /* 为固定导航栏留出空间 */
+}
+
 .sidebar {
-    min-height: 100vh;
-    border-right: 1px solid #dee2e6;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        padding-top: 0.5rem;
+    }
+
+    main {
+        margin-top: 1rem;
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr; /* 手机端单列显示 */
+    }
 }
 
 .compare-item {
@@ -11,7 +36,7 @@
 }
 
 .prompt-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* 手机端稍微减小字体 */
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: #f8f9fa;
@@ -20,16 +45,28 @@
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
+}
+
+.ai-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .ai-image {
     width: 100%;
     border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .ai-tool-name {
     font-weight: bold;
     margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
 } 

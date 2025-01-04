@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Meta Tags -->
     <title>AI图像生成对比 - 探索不同AI工具的创作效果</title>
     <meta name="description" content="<!-- TODO: 添加网站描述 -->">
@@ -13,19 +14,22 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
                 AI图像对比
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </header>
 
     <div class="container-fluid">
         <div class="row">
             <!-- 左侧分类栏 -->
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column" id="categoriesList">
                         <!-- 分类将通过 JS 动态加载 -->
@@ -35,7 +39,7 @@
 
             <!-- 主要内容区域 -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div id="compareItems">
+                <div id="compareItems" class="mt-4">
                     <!-- 对比内容将通过 JS 动态加载 -->
                 </div>
             </main>
