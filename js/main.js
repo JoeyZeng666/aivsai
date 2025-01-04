@@ -1,6 +1,7 @@
 // 存储所有数据
 let allCompareItems = [];
 let selectedTags = new Set();
+let tagNameMap = {}; // 新增：存储标签id到name的映射
 
 // 加载分类数据
 async function loadCategories() {
@@ -8,6 +9,16 @@ async function loadCategories() {
         const response = await fetch('data/categories.json');
         const categoryGroups = await response.json();
         const categoriesList = document.getElementById('categoriesList');
+        
+        // 新增：构建标签映射
+        categoryGroups.forEach(group => {
+            group.tags.forEach(tag => {
+                tagNameMap[tag.id] = {
+                    name: tag.name,
+                    emoji: tag.emoji
+                };
+            });
+        });
         
         categoryGroups.forEach(group => {
             // 创建分组容器
@@ -74,19 +85,29 @@ function filterCompareItems() {
     let filteredItems;
     
     if (selectedTags.size === 0) {
-        // 如果没有选中任何标签,显示所有内容
         filteredItems = allCompareItems;
     } else {
-        // 筛选同时包含所有选中标签的内容
         filteredItems = allCompareItems.filter(item => 
             Array.from(selectedTags).every(tag => item.tags.includes(tag))
         );
     }
     
-    // 渲染筛选后的内容
+    // 修改渲染模板，使用标签名称而不是id
     compareItems.innerHTML = filteredItems.map(item => `
         <div class="compare-item mb-3">
-            <p class="prompt-text text-muted mb-2 fs-6">${item.prompt}</p>
+            <div class="d-flex align-items-start justify-content-between mb-2">
+                <p class="prompt-text text-muted mb-0 fs-6">${item.prompt}</p>
+                <div class="tags-display ms-3">
+                    ${item.tags.map(tagId => {
+                        const tagInfo = tagNameMap[tagId];
+                        return tagInfo ? `
+                            <span class="badge text-secondary bg-light border me-1" style="font-size: 0.75rem; font-weight: normal;">
+                                ${tagInfo.emoji} ${tagInfo.name}
+                            </span>
+                        ` : '';
+                    }).join('')}
+                </div>
+            </div>
             <div class="row g-2">
                 ${item.aiResults.map(result => `
                     <div class="col-md-4">
