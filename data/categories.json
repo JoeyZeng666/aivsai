@@ -1,30 +1,50 @@
 [
     {
-        "groupName": "场景",
+        "groupName": "风格",
         "tags": [
             {
-                "id": "landscape",
-                "name": "风景",
-                "emoji": "🌄"
+                "id": "hyper_realistic",
+                "name": "超写实",
+                "emoji": "📸"
             },
             {
-                "id": "city",
-                "name": "城市",
-                "emoji": "🌆"
+                "id": "anime_jp",
+                "name": "日系动漫",
+                "emoji": "🎎"
             },
             {
-                "id": "interior",
-                "name": "室内",
-                "emoji": "🏠"
+                "id": "cartoon_us",
+                "name": "美系卡通",
+                "emoji": "🎨"
+            },
+            {
+                "id": "3d_anime",
+                "name": "3D动漫",
+                "emoji": "🎮"
+            },
+            {
+                "id": "ink_wash",
+                "name": "水墨画",
+                "emoji": "🖌️"
+            },
+            {
+                "id": "chinese_traditional",
+                "name": "古风",
+                "emoji": "🏯"
+            },
+            {
+                "id": "pixel_art",
+                "name": "像素风",
+                "emoji": "👾"
             }
         ]
     },
     {
-        "groupName": "主题",
+        "groupName": "内容",
         "tags": [
             {
-                "id": "portrait",
-                "name": "人像",
+                "id": "character",
+                "name": "人物",
                 "emoji": "👤"
             },
             {
@@ -33,9 +53,14 @@
                 "emoji": "🐾"
             },
             {
-                "id": "fantasy",
-                "name": "奇幻",
-                "emoji": "🌟"
+                "id": "object",
+                "name": "物品",
+                "emoji": "🎁"
+            },
+            {
+                "id": "landscape",
+                "name": "风景",
+                "emoji": "🌄"
             }
         ]
     }
