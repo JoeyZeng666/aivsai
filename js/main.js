@@ -79,9 +79,9 @@ async function loadAllCompareItems() {
     }
 }
 
-// 添加一个判断是否为移动端的函数
+// 修改判断是否为移动端的函数
 function isMobile() {
-    return window.innerWidth < 768;
+    return window.innerWidth < 576; // 使用 Bootstrap 的 sm 断点
 }
 
 // 修改 filterCompareItems 函数
@@ -99,7 +99,7 @@ function filterCompareItems() {
     
     // 根据屏幕宽度选择不同的渲染模板
     if (isMobile()) {
-        // 移动端模板
+        // 移动端模板（仅在小于576px时使用）
         compareItems.innerHTML = filteredItems.map(item => `
             <div class="col-12">
                 <div class="compare-item">
@@ -131,9 +131,9 @@ function filterCompareItems() {
             </div>
         `).join('');
     } else {
-        // PC端模板
+        // PC和平板模板（大于等于576px时使用）
         compareItems.innerHTML = filteredItems.map(item => `
-            <div class="col-12 col-lg-6 mb-4">
+            <div class="col-sm-12 col-lg-6 mb-4">
                 <div class="compare-item h-100">
                     <div class="d-flex align-items-start justify-content-between mb-3">
                         <p class="prompt-text text-muted mb-0">${item.prompt}</p>
@@ -150,7 +150,7 @@ function filterCompareItems() {
                     </div>
                     <div class="row g-4">
                         ${item.aiResults.map(result => `
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <figure class="figure mb-2">
                                     <img src="${result.imageUrl}" alt="${result.aiTool} 生成的图片" 
                                          class="figure-img img-fluid rounded shadow-none">
