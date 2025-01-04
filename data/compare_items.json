@@ -1,12 +1,12 @@
 [
     {
         "id": "1",
-        "tags": ["landscape", "hyper_realistic"], 
-        "prompt": "一个宁静的湖泊，周围环绕着雪山，日落时分",
+        "tags": ["character", "hyper_realistic"],
+        "prompt": "一位在午后阳光下的欧洲古典咖啡馆中沉思的中年男子，他身着质感细腻的复古西装，脸上的皱纹与胡茬清晰可见，超写实风格展现每一个细节",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/300"
+                "imageUrl": "images/keling/可灵_一位在午后阳光下的欧洲古典咖啡馆中沉思的中年男子_他身着质感细腻.png"
             },
             {
                 "aiTool": "Stable Diffusion",
@@ -20,8 +20,8 @@
     },
     {
         "id": "2",
-        "tags": ["landscape", "ink_wash"],
-        "prompt": "郁郁葱葱的热带雨林，阳光透过树叶",
+        "tags": ["character", "hyper_realistic"],
+        "prompt": "超写实的年轻女性运动员，汗水湿透了她紧身的运动背心，肌肉线条紧致，站在奥运会领奖台上，眼神中透露出喜悦与自豪，背景是欢呼的人群",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -38,9 +38,9 @@
         ]
     },
     {
-        "id": "3", 
-        "tags": ["landscape", "chinese_traditional"],
-        "prompt": "金色沙漠中的绿洲，棕榈树倒映在水中",
+        "id": "3",
+        "tags": ["character", "hyper_realistic"],
+        "prompt": "特写一位正在创作油画的老艺术家，他的双手沾满颜料，专注的神情刻画入微，身旁摆放着各种精致的画具，画面呈现超写实质感",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -58,8 +58,8 @@
     },
     {
         "id": "4",
-        "tags": ["landscape", "anime_jp"], 
-        "prompt": "薰衣草田，远处是古老的风车",
+        "tags": ["animal", "hyper_realistic"],
+        "prompt": "非洲草原上的猎豹全力奔跑捕猎瞬间，超写实风格凸显它矫健的身姿，肌肉紧绷，扬起的尘土颗粒清晰可辨，阳光洒在皮毛上泛出光泽",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -77,8 +77,8 @@
     },
     {
         "id": "5",
-        "tags": ["landscape", "3d_anime"],
-        "prompt": "悬崖边的古堡，乌云密布",
+        "tags": ["animal", "hyper_realistic"],
+        "prompt": "一只慵懒的橘猫趴在柔软的波斯地毯上，猫毛根根分明，超写实描绘它半眯着眼、微张着嘴打哈欠的模样，身旁散落着几个毛线球",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -96,8 +96,8 @@
     },
     {
         "id": "6",
-        "tags": ["landscape", "pixel_art"],
-        "prompt": "樱花盛开的日本庭院",
+        "tags": ["animal", "hyper_realistic"],
+        "prompt": "深海中的巨型章鱼舒展触手游动，超写实展现其独特的皮肤纹理，吸盘细节栩栩如生，周围是散发着幽光的水母与穿梭的小鱼",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -115,8 +115,8 @@
     },
     {
         "id": "7",
-        "tags": ["landscape", "cartoon_us"],
-        "prompt": "北极光照耀下的冰川",
+        "tags": ["object", "hyper_realistic"],
+        "prompt": "陈列在古董店橱窗中的一块百达翡丽机械手表，超写实呈现表壳的金属光泽、精细的表盘刻度以及内部复杂的机械结构，光线折射完美还原",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -134,8 +134,8 @@
     },
     {
         "id": "8",
-        "tags": ["landscape", "ink_wash"],
-        "prompt": "雾气缭绕的竹林小径",
+        "tags": ["object", "hyper_realistic"],
+        "prompt": "超写实的复古打字机，键盘上的字母磨损痕迹清晰可见，机身的烤漆在光线下闪烁，纸张从滚筒中微微探出，仿佛随时等待敲击",
         "aiResults": [
             {
                 "aiTool": "Midjourney",
@@ -148,234 +148,6 @@
             {
                 "aiTool": "DALL-E",
                 "imageUrl": "https://picsum.photos/400/323"
-            }
-        ]
-    },
-    {
-        "id": "9",
-        "tags": ["landscape", "hyper_realistic"],
-        "prompt": "波涛汹涌的海岸线，灯塔矗立",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/324"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/325"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/326"
-            }
-        ]
-    },
-    {
-        "id": "10",
-        "tags": ["landscape", "chinese_traditional"],
-        "prompt": "秋天的枫林，落叶纷飞",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/327"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/328"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/329"
-            }
-        ]
-    },
-    {
-        "id": "11",
-        "tags": ["character", "anime_jp"],
-        "prompt": "年轻女子的侧脸，穿着复古连衣裙",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/330"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/331"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/332"
-            }
-        ]
-    },
-    {
-        "id": "12",
-        "tags": ["character", "ink_wash"],
-        "prompt": "老人的沧桑面庞，饱经风霜",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/333"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/334"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/335"
-            }
-        ]
-    },
-    {
-        "id": "13",
-        "tags": ["character", "cartoon_us"],
-        "prompt": "戴着花环的小女孩，天真烂漫",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/336"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/337"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/338"
-            }
-        ]
-    },
-    {
-        "id": "14",
-        "tags": ["character", "chinese_traditional"],
-        "prompt": "武士装扮的男子，气势凛然",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/339"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/340"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/341"
-            }
-        ]
-    },
-    {
-        "id": "15",
-        "tags": ["character", "hyper_realistic"],
-        "prompt": "芭蕾舞者的优雅姿态",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/342"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/343"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/344"
-            }
-        ]
-    },
-    {
-        "id": "16",
-        "tags": ["character", "pixel_art"],
-        "prompt": "街头艺人的表演瞬间",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/345"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/346"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/347"
-            }
-        ]
-    },
-    {
-        "id": "17",
-        "tags": ["character", "3d_anime"],
-        "prompt": "科幻风格的未来战士",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/348"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/349"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/350"
-            }
-        ]
-    },
-    {
-        "id": "18",
-        "tags": ["character", "anime_jp"],
-        "prompt": "雨中撑伞的神秘人",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/351"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/352"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/353"
-            }
-        ]
-    },
-    {
-        "id": "19",
-        "tags": ["character", "hyper_realistic"],
-        "prompt": "画家在作画时的专注神情",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/354"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/355"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/356"
-            }
-        ]
-    },
-    {
-        "id": "20",
-        "tags": ["character", "chinese_traditional"],
-        "prompt": "戏曲演员的精彩扮相",
-        "aiResults": [
-            {
-                "aiTool": "Midjourney",
-                "imageUrl": "https://picsum.photos/400/357"
-            },
-            {
-                "aiTool": "Stable Diffusion",
-                "imageUrl": "https://picsum.photos/400/358"
-            },
-            {
-                "aiTool": "DALL-E",
-                "imageUrl": "https://picsum.photos/400/359"
             }
         ]
     }

@@ -3,37 +3,37 @@
         "groupName": "风格",
         "tags": [
             {
-                "id": "hyper_realistic",
+                "id": "超写实",
                 "name": "超写实",
                 "emoji": "📸"
             },
             {
-                "id": "anime_jp",
+                "id": "日系动漫",
                 "name": "日系动漫",
                 "emoji": "🎎"
             },
             {
-                "id": "cartoon_us",
+                "id": "美系卡通",
                 "name": "美系卡通",
                 "emoji": "🎨"
             },
             {
-                "id": "3d_anime",
+                "id": "3D动漫",
                 "name": "3D动漫",
                 "emoji": "🎮"
             },
             {
-                "id": "ink_wash",
+                "id": "水墨画",
                 "name": "水墨画",
                 "emoji": "🖌️"
             },
             {
-                "id": "chinese_traditional",
+                "id": "古风",
                 "name": "古风",
                 "emoji": "🏯"
             },
             {
-                "id": "pixel_art",
+                "id": "像素风",
                 "name": "像素风",
                 "emoji": "👾"
             }
@@ -43,22 +43,22 @@
         "groupName": "内容",
         "tags": [
             {
-                "id": "character",
+                "id": "人物",
                 "name": "人物",
                 "emoji": "👤"
             },
             {
-                "id": "animal",
+                "id": "动物",
                 "name": "动物",
                 "emoji": "🐾"
             },
             {
-                "id": "object",
+                "id": "物品",
                 "name": "物品",
                 "emoji": "🎁"
             },
             {
-                "id": "landscape",
+                "id": "风景",
                 "name": "风景",
                 "emoji": "🌄"
             }
