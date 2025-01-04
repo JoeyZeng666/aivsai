@@ -7,13 +7,26 @@ async function loadCategories() {
         
         categories.forEach(category => {
             const li = document.createElement('li');
-            li.className = 'nav-item';
+            li.className = 'nav-item mb-2';
             li.innerHTML = `
-                <a class="nav-link" href="#" data-category="${category.id}">
+                <button class="btn btn-outline-primary w-100" data-category="${category.id}">
                     ${category.name}
-                </a>
+                </button>
             `;
-            li.addEventListener('click', () => loadCompareItems(category.id));
+            li.addEventListener('click', (e) => {
+                // 移除其他按钮的选中状态
+                document.querySelectorAll('.btn').forEach(btn => {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-outline-primary');
+                });
+                
+                // 设置当前按钮的选中状态
+                const button = e.currentTarget.querySelector('.btn');
+                button.classList.remove('btn-outline-primary');
+                button.classList.add('btn-primary');
+                
+                loadCompareItems(category.id);
+            });
             categoriesList.appendChild(li);
         });
 
