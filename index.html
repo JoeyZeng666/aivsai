@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Meta Tags -->
     <title>AI图像生成对比 - 探索不同AI工具的创作效果</title>
     <meta name="description" content="<!-- TODO: 添加网站描述 -->">
@@ -22,24 +23,19 @@
     </header>
 
    
-    <div class="container-fluid">
+    <div class="container-fluid px-2 px-md-4">
          <!-- 标签筛选区域 -->
         <div class="tags-section">
-            <div class="container d-flex justify-content-left">
-                <ul class="nav nav-pills" id="categoriesList">
+            <div class="container-fluid px-2 px-md-3">
+                <ul class="nav nav-pills flex-column flex-md-row" id="categoriesList">
                     <!-- 标签将通过 JS 动态加载 -->
                 </ul>
             </div>
         </div>
 
-
-        <div class="row">
-            <!-- 主要内容区域 -->
-            <main class="col-12 px-4">
-                <div id="compareItems">
-                    <!-- 对比内容将通过 JS 动态加载 -->
-                </div>
-            </main>
+        <!-- 内容区域 -->
+        <div id="compareItems" class="row g-4">
+            <!-- 内容将通过 JS 动态加载 -->
         </div>
     </div>
 
