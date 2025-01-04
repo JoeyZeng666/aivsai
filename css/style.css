@@ -189,7 +189,7 @@ body {
 
 /* 标签区域样式 */
 .tags-section {
-    padding: 0.5rem 0;
+    padding: 0.5rem 2rem;  /* 与 container-fluid 的内边距保持一致 */
 }
 
 #categoriesList {
@@ -316,6 +316,11 @@ body {
         font-size: 0.8rem;
         padding: 0.4rem 0.8rem;
     }
+
+    /* 修改 tags-section 的内边距 */
+    .tags-section {
+        padding: 0.5rem 1rem;  /* 移动端使用更小的内边距 */
+    }
 }
 
 /* 平板设备适配 */
@@ -333,7 +338,12 @@ body {
     .image-grid {
         grid-template-columns: repeat(3, 1fr);  /* 平板端三列显示图片 */
     }
-} 
+
+    /* 修改 tags-section 的内边距 */
+    .tags-section {
+        padding: 0.5rem 1.5rem;  /* 平板端使用中等内边距 */
+    }
+}
 
 /* 图片容器样式 */
 .figure {
