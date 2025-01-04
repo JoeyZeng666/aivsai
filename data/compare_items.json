@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "categoryId": "landscape",
+        "categoryId": "landscape", 
         "prompt": "一个宁静的湖泊，周围环绕着雪山，日落时分",
         "aiResults": [
             {
@@ -9,7 +9,7 @@
                 "imageUrl": "https://picsum.photos/400/300"
             },
             {
-                "aiTool": "Stable Diffusion",
+                "aiTool": "Stable Diffusion", 
                 "imageUrl": "https://picsum.photos/400/301"
             },
             {
@@ -17,5 +17,366 @@
                 "imageUrl": "https://picsum.photos/400/302"
             }
         ]
+    },
+    {
+        "id": "2",
+        "categoryId": "landscape",
+        "prompt": "郁郁葱葱的热带雨林，阳光透过树叶",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/303"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/304"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/305"
+            }
+        ]
+    },
+    {
+        "id": "3", 
+        "categoryId": "landscape",
+        "prompt": "金色沙漠中的绿洲，棕榈树倒映在水中",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/306"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/307"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/308"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "categoryId": "landscape", 
+        "prompt": "薰衣草田，远处是古老的风车",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/309"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/310"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/311"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "categoryId": "landscape",
+        "prompt": "悬崖边的古堡，乌云密布",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/312"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/313"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/314"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "categoryId": "landscape",
+        "prompt": "樱花盛开的日本庭院",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/315"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/316"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/317"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "categoryId": "landscape",
+        "prompt": "北极光照耀下的冰川",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/318"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/319"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/320"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "categoryId": "landscape",
+        "prompt": "雾气缭绕的竹林小径",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/321"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/322"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/323"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "categoryId": "landscape",
+        "prompt": "波涛汹涌的海岸线，灯塔矗立",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/324"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/325"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/326"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "categoryId": "landscape",
+        "prompt": "秋天的枫林，落叶纷飞",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/327"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/328"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/329"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "categoryId": "portrait",
+        "prompt": "年轻女子的侧脸，穿着复古连衣裙",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/330"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/331"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/332"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "categoryId": "portrait",
+        "prompt": "老人的沧桑面庞，饱经风霜",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/333"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/334"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/335"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "categoryId": "portrait",
+        "prompt": "戴着花环的小女孩，天真烂漫",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/336"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/337"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/338"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "categoryId": "portrait",
+        "prompt": "武士装扮的男子，气势凛然",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/339"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/340"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/341"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "categoryId": "portrait",
+        "prompt": "芭蕾舞者的优雅姿态",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/342"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/343"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/344"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "categoryId": "portrait",
+        "prompt": "街头艺人的表演瞬间",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/345"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/346"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/347"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "categoryId": "portrait",
+        "prompt": "科幻风格的未来战士",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/348"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/349"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/350"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "categoryId": "portrait",
+        "prompt": "雨中撑伞的神秘人",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/351"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/352"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/353"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "categoryId": "portrait",
+        "prompt": "画家在作画时的专注神情",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/354"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/355"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/356"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "categoryId": "portrait",
+        "prompt": "戏曲演员的精彩扮相",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/357"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/358"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/359"
+            }
+        ]
     }
-] 
+]
