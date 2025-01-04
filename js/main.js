@@ -10,30 +10,30 @@ async function loadCategories() {
         const categoriesList = document.getElementById('categoriesList');
         
         categoryGroups.forEach(group => {
+            // 创建分组容器
+            const groupContainer = document.createElement('li');
+            groupContainer.className = 'nav-group-container';
+            
             // 创建分组标题
-            const groupTitle = document.createElement('li');
+            const groupTitle = document.createElement('span');
             groupTitle.className = 'nav-group-title';
-            groupTitle.textContent = group.groupName;
-            categoriesList.appendChild(groupTitle);
+            groupTitle.textContent = '#'+group.groupName;
+            groupContainer.appendChild(groupTitle);
             
             // 创建标签容器
-            const tagContainer = document.createElement('li');
-            tagContainer.className = 'nav-group-container';
+            const tagContainer = document.createElement('div');
+            tagContainer.className = 'tag-container';
             
             // 添加该分组的所有标签
             group.tags.forEach(tag => {
                 const tagElement = document.createElement('a');
-                tagElement.className = 'nav-link';
+                tagElement.className = 'tag-link text-decoration-none';
                 tagElement.href = '#';
                 tagElement.dataset.tag = tag.id;
-                tagElement.innerHTML = `
-                    <span class="category-emoji">${tag.emoji}</span>
-                    ${tag.name}
-                `;
+                tagElement.textContent = tag.emoji+tag.name;
                 
                 tagElement.addEventListener('click', (e) => {
                     e.preventDefault();
-                    // 切换标签选中状态
                     tagElement.classList.toggle('active');
                     if (selectedTags.has(tag.id)) {
                         selectedTags.delete(tag.id);
@@ -46,7 +46,8 @@ async function loadCategories() {
                 tagContainer.appendChild(tagElement);
             });
             
-            categoriesList.appendChild(tagContainer);
+            groupContainer.appendChild(tagContainer);
+            categoriesList.appendChild(groupContainer);
         });
 
         // 加载所有对比内容
