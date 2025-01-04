@@ -1,0 +1,21 @@
+[
+    {
+        "id": "1",
+        "categoryId": "landscape",
+        "prompt": "一个宁静的湖泊，周围环绕着雪山，日落时分",
+        "aiResults": [
+            {
+                "aiTool": "Midjourney",
+                "imageUrl": "https://picsum.photos/400/300"
+            },
+            {
+                "aiTool": "Stable Diffusion",
+                "imageUrl": "https://picsum.photos/400/301"
+            },
+            {
+                "aiTool": "DALL-E",
+                "imageUrl": "https://picsum.photos/400/302"
+            }
+        ]
+    }
+] 

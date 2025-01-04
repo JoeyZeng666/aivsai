@@ -1,0 +1,35 @@
+.sidebar {
+    min-height: 100vh;
+    border-right: 1px solid #dee2e6;
+}
+
+.compare-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+}
+
+.prompt-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.ai-image {
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.ai-tool-name {
+    font-weight: bold;
+    margin-top: 0.5rem;
+} 
