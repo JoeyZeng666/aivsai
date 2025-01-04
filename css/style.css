@@ -198,22 +198,22 @@ body {
 /* 标签区域样式 */
 .tags-section {
     padding: 0;
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
 }
 
 #categoriesList {
     display: flex;
     flex-direction: column;
-    gap: 1rem;  /* 分组之间的垂直间距 */
+    gap: 0.75rem;  /* 减小分组之间的间距 */
 }
 
 .nav-group-container {
     display: flex;
-    align-items: center;  /* 垂直居中对齐 */
-    gap: 1rem;  /* 标题和标签之间的间距 */
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;  /* 移除内边距 */
     width: 100%;
+    border: none;  /* 移除分割线 */
 }
 
 .nav-group-container:last-child {
@@ -226,19 +226,19 @@ body {
     color: #666;
     margin: 0;
     padding: 0;
-    white-space: nowrap;  /* 防止标题换行 */
-    min-width: 4em;  /* 给标题一个最小宽度 */
+    white-space: nowrap;
+    min-width: 4em;
 }
 
 .nav-group-title::after {
-    content: "：";  /* 添加冒号 */
+    content: "：";
 }
 
 /* 标签容器 */
 .tag-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 1.5rem;  /* 标签之间的间距 */
+    gap: 0.75rem 1.25rem;  /* 稍微减小标签之间的间距 */
 }
 
 .tag-link {
