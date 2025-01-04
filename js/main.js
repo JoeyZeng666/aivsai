@@ -4,6 +4,25 @@ let selectedTags = new Set();
 let tagNameMap = {}; // 新增：存储标签id到name的映射
 let imageCache = new Map(); // 新增：用于缓存已加载的图片
 
+// 新增：从 URL 读取标签
+function getTagsFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tags = urlParams.get('tags');
+    return tags ? new Set(tags.split(',')) : new Set();
+}
+
+// 新增：更新 URL 中的标签
+function updateUrlTags(tags) {
+    const url = new URL(window.location);
+    if (tags.size > 0) {
+        url.searchParams.set('tags', Array.from(tags).join(','));
+    } else {
+        url.searchParams.delete('tags');
+    }
+    // 更新 URL 但不刷新页面
+    window.history.pushState({}, '', url);
+}
+
 // 加载分类数据
 async function loadCategories() {
     try {
@@ -11,7 +30,7 @@ async function loadCategories() {
         const categoryGroups = await response.json();
         const categoriesList = document.getElementById('categoriesList');
         
-        // 新增：构建标签映射
+        // 构建标签映射
         categoryGroups.forEach(group => {
             group.tags.forEach(tag => {
                 tagNameMap[tag.id] = {
@@ -20,6 +39,9 @@ async function loadCategories() {
                 };
             });
         });
+
+        // 从 URL 读取已选标签
+        selectedTags = getTagsFromUrl();
         
         categoryGroups.forEach(group => {
             // 创建分组容器
@@ -40,6 +62,10 @@ async function loadCategories() {
             group.tags.forEach(tag => {
                 const tagElement = document.createElement('a');
                 tagElement.className = 'tag-link text-decoration-none';
+                // 如果标签在 URL 中，添加 active 类
+                if (selectedTags.has(tag.id)) {
+                    tagElement.classList.add('active');
+                }
                 tagElement.href = '#';
                 tagElement.dataset.tag = tag.id;
                 tagElement.textContent = tag.emoji+tag.name;
@@ -52,6 +78,8 @@ async function loadCategories() {
                     } else {
                         selectedTags.add(tag.id);
                     }
+                    // 更新 URL
+                    updateUrlTags(selectedTags);
                     filterCompareItems();
                 });
                 
@@ -217,6 +245,21 @@ function renderTags(tags) {
 
 // 添加窗口大小变化的监听器
 window.addEventListener('resize', filterCompareItems);
+
+// 新增：处理浏览器前进/后退事件
+window.addEventListener('popstate', () => {
+    selectedTags = getTagsFromUrl();
+    // 更新标签的激活状态
+    document.querySelectorAll('.tag-link').forEach(tagElement => {
+        const tagId = tagElement.dataset.tag;
+        if (selectedTags.has(tagId)) {
+            tagElement.classList.add('active');
+        } else {
+            tagElement.classList.remove('active');
+        }
+    });
+    filterCompareItems();
+});
 
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', loadCategories); 
