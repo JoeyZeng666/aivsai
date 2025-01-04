@@ -22,39 +22,106 @@ body {
     font-size: 1.4rem;
 }
 
-/* 侧边栏样式 */
-.sidebar {
-    position: fixed;
+/* 分类导航样式 */
+.category-tabs {
+    position: sticky;
     top: 56px;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    padding: 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    background-color: white;
+    background: white;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: var(--card-shadow);
 }
 
-.sidebar .nav-link {
-    font-weight: 500;
+.nav-pills {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-pills::-webkit-scrollbar {
+    height: 4px;
+}
+
+.nav-pills::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.nav-pills .nav-link {
     color: var(--dark-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: var(--card-shadow);
 }
 
-.sidebar .nav-link:hover {
+.nav-pills .nav-link:hover {
     color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.nav-pills .nav-link.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 容器样式 */
+.container-fluid {
+    max-width: 1600px; /* 限制最大宽度 */
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* 内容区域样式 */
+#compareItems {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* 大屏幕两列布局 */
+@media (min-width: 1200px) {
+    #compareItems {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 调整卡片在两列布局下的样式 */
 .compare-item {
     background: white;
-    margin-bottom: 2rem;
+    margin-bottom: 0; /* 移除底部间距，因为使用了grid gap */
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: var(--card-shadow);
     transition: transform 0.2s;
+    height: 100%; /* 确保同一行的卡片高度一致 */
+    display: flex;
+    flex-direction: column;
 }
 
-.compare-item:hover {
-    transform: translateY(-2px);
+/* 确保图片网格在卡片中自适应 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    flex: 1;
+}
+
+/* 调整分类导航在大屏幕下的样式 */
+@media (min-width: 1200px) {
+    .category-tabs {
+        padding: 1rem 2rem;
+    }
+    
+    .nav-pills {
+        justify-content: center; /* 大屏幕下居中显示分类 */
+    }
 }
 
 .prompt-text {
@@ -65,12 +132,6 @@ body {
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
     color: var(--dark-color);
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
 }
 
 .ai-result {
@@ -107,45 +168,26 @@ body {
 
 /* 响应式调整 */
 @media (max-width: 767.98px) {
-    .sidebar {
-        position: static;
-        height: auto;
-        padding-top: 1rem;
-        background-color: transparent;
+    .container-fluid {
+        padding: 0 1rem;
     }
 
-    main {
-        margin-top: 1rem;
+    .category-tabs {
+        margin: 0 -1rem;
     }
     
-    .image-grid {
+    .nav-pills {
+        padding: 0.5rem 1rem;
+    }
+    
+    #compareItems {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
     }
 
     .compare-item {
-        margin: 1rem;
+        margin: 0;
         padding: 1rem;
     }
-}
-
-/* 按钮样式 */
-.btn-category {
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
-    transition: all 0.3s;
-    border: none;
-    background: white;
-    color: var(--dark-color);
-    box-shadow: var(--card-shadow);
-}
-
-.btn-category:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-category.active {
-    background: var(--primary-color);
-    color: white;
 } 
