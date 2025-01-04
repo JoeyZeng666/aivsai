@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "categoryId": "landscape", 
+        "tags": ["landscape", "fantasy"], 
         "prompt": "一个宁静的湖泊，周围环绕着雪山，日落时分",
         "aiResults": [
             {
@@ -9,7 +9,7 @@
                 "imageUrl": "https://picsum.photos/400/300"
             },
             {
-                "aiTool": "Stable Diffusion", 
+                "aiTool": "Stable Diffusion",
                 "imageUrl": "https://picsum.photos/400/301"
             },
             {
@@ -20,7 +20,7 @@
     },
     {
         "id": "2",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "郁郁葱葱的热带雨林，阳光透过树叶",
         "aiResults": [
             {
@@ -39,7 +39,7 @@
     },
     {
         "id": "3", 
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "金色沙漠中的绿洲，棕榈树倒映在水中",
         "aiResults": [
             {
@@ -58,7 +58,7 @@
     },
     {
         "id": "4",
-        "categoryId": "landscape", 
+        "tags": ["landscape"], 
         "prompt": "薰衣草田，远处是古老的风车",
         "aiResults": [
             {
@@ -77,7 +77,7 @@
     },
     {
         "id": "5",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "悬崖边的古堡，乌云密布",
         "aiResults": [
             {
@@ -96,7 +96,7 @@
     },
     {
         "id": "6",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "樱花盛开的日本庭院",
         "aiResults": [
             {
@@ -115,7 +115,7 @@
     },
     {
         "id": "7",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "北极光照耀下的冰川",
         "aiResults": [
             {
@@ -134,7 +134,7 @@
     },
     {
         "id": "8",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "雾气缭绕的竹林小径",
         "aiResults": [
             {
@@ -153,7 +153,7 @@
     },
     {
         "id": "9",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "波涛汹涌的海岸线，灯塔矗立",
         "aiResults": [
             {
@@ -172,7 +172,7 @@
     },
     {
         "id": "10",
-        "categoryId": "landscape",
+        "tags": ["landscape"],
         "prompt": "秋天的枫林，落叶纷飞",
         "aiResults": [
             {
@@ -191,7 +191,7 @@
     },
     {
         "id": "11",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "年轻女子的侧脸，穿着复古连衣裙",
         "aiResults": [
             {
@@ -210,7 +210,7 @@
     },
     {
         "id": "12",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "老人的沧桑面庞，饱经风霜",
         "aiResults": [
             {
@@ -229,7 +229,7 @@
     },
     {
         "id": "13",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "戴着花环的小女孩，天真烂漫",
         "aiResults": [
             {
@@ -248,7 +248,7 @@
     },
     {
         "id": "14",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "武士装扮的男子，气势凛然",
         "aiResults": [
             {
@@ -267,7 +267,7 @@
     },
     {
         "id": "15",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "芭蕾舞者的优雅姿态",
         "aiResults": [
             {
@@ -286,7 +286,7 @@
     },
     {
         "id": "16",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "街头艺人的表演瞬间",
         "aiResults": [
             {
@@ -305,7 +305,7 @@
     },
     {
         "id": "17",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "科幻风格的未来战士",
         "aiResults": [
             {
@@ -324,7 +324,7 @@
     },
     {
         "id": "18",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "雨中撑伞的神秘人",
         "aiResults": [
             {
@@ -343,7 +343,7 @@
     },
     {
         "id": "19",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "画家在作画时的专注神情",
         "aiResults": [
             {
@@ -362,7 +362,7 @@
     },
     {
         "id": "20",
-        "categoryId": "portrait",
+        "tags": ["portrait"],
         "prompt": "戏曲演员的精彩扮相",
         "aiResults": [
             {
