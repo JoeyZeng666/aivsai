@@ -6,7 +6,7 @@
 }
 
 body {
-    padding-top: 56px;
+    padding-top: 16px;
     background-color: var(--light-color);
     color: var(--dark-color);
 }
@@ -15,10 +15,26 @@ body {
 .navbar {
     box-shadow: var(--card-shadow);
     background: linear-gradient(to right, var(--dark-color), var(--secondary-color)) !important;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: flex-end;
 }
 
 .navbar-brand {
     font-size: 1.4rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.navbar-nav {
+    align-items: flex-end;
+}
+
+.navbar-collapse {
+    align-items: flex-end;
 }
 
 /* 分类导航样式 */
