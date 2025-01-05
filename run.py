@@ -2,9 +2,15 @@ import http.server
 import socketserver
 import webbrowser
 import os
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, format, *args):
+        # 对 URL 编码的参数进行解码
+        decoded_args = [unquote(str(arg)) for arg in args]
+        # 使用解码后的参数进行日志打印
+        super().log_message(format, *decoded_args)
+        
     def end_headers(self):
         # 添加CORS头，允许所有来源
         self.send_header('Access-Control-Allow-Origin', '*')

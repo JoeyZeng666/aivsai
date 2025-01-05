@@ -234,8 +234,7 @@ function initLazyLoading() {
                         observer.unobserve(img);
                     })
                     .catch(error => {
-                        console.error('Error loading image:', error);
-                        img.src = 'path/to/error-image.png'; // 添加一个加载失败的占位图
+                        img.src = 'images/logo.png'; // 添加一个加载失败的占位图
                     });
             }
         });
