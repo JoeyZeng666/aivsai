@@ -5,6 +5,7 @@ import json
 
 ziduan = '可灵'
 folder_path = 'images/keling'
+target_excel = 'py/prompts.xlsx'
 
 def calculate_similarity(a, b):
     """计算两个字符串的相似度"""
@@ -16,7 +17,7 @@ def get_file_name_without_extension(file_name):
 
 def main():
     # 1. 读取 Excel 文件中的「提示语」列
-    df = pd.read_excel('prompts.xlsx')
+    df = pd.read_excel(target_excel)
     prompts = df['提示语'].tolist()
 
     # 2. 读取 keling 文件夹下的所有文件名
@@ -51,6 +52,10 @@ def main():
             used_files.add(best_match)
     
     # 4. 生成图片访问路径并更新 Excel
+    # 先将所有行的字段置空
+    df[ziduan] = ''
+    
+    # 如果有匹配结果,再更新对应行
     for match in matches:
         image_path = f"{folder_path}/{match['file']}"
         # 找到对应的提示语所在行
@@ -58,7 +63,7 @@ def main():
         df.loc[mask, ziduan] = image_path
     
     # 直接更新原文件，而不是创建新文件
-    df.to_excel('prompts.xlsx', index=False)
+    df.to_excel(target_excel, index=False)
     
     # 打印匹配结果
     print("匹配结果：")

@@ -3,7 +3,7 @@ import json
 
 def generate_compare_items():
     # 读取Excel文件
-    df = pd.read_excel('prompts.xlsx')
+    df = pd.read_excel('py/prompts.xlsx')
     
     # 初始化结果列表
     compare_items = []
