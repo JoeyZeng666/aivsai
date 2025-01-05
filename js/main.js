@@ -35,7 +35,8 @@ async function loadCategories() {
             group.tags.forEach(tag => {
                 tagNameMap[tag.id] = {
                     name: tag.name,
-                    emoji: tag.emoji
+                    emoji: tag.emoji,
+                    group: group.groupName // 记录标签所属分组
                 };
             });
         });
@@ -68,16 +69,28 @@ async function loadCategories() {
                 }
                 tagElement.href = '#';
                 tagElement.dataset.tag = tag.id;
+                tagElement.dataset.group = group.groupName;
                 tagElement.textContent = tag.emoji+tag.name;
                 
                 tagElement.addEventListener('click', (e) => {
                     e.preventDefault();
+                    
+                    // 移除同组其他标签的active状态
+                    document.querySelectorAll(`.tag-link[data-group="${group.groupName}"]`).forEach(el => {
+                        if(el !== tagElement) {
+                            el.classList.remove('active');
+                            selectedTags.delete(el.dataset.tag);
+                        }
+                    });
+                    
+                    // 切换当前标签状态
                     tagElement.classList.toggle('active');
                     if (selectedTags.has(tag.id)) {
                         selectedTags.delete(tag.id);
                     } else {
                         selectedTags.add(tag.id);
                     }
+                    
                     // 更新 URL
                     updateUrlTags(selectedTags);
                     filterCompareItems();
